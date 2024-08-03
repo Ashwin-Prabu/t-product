@@ -28,7 +28,7 @@ The following package contains the different tools required in implementing the 
     Implements conjugate transpose of tensor with respect to t-product.
 
 ## Inverse Row Slices
-    Calculates inverse for row slices product with its conjugate transpose (refer to [Anna Ma's and Denali Molitor's paper TRK](https://arxiv.org/pdf/2006.01246)).
+    Calculates inverse for row slices product with its conjugate transpose (refer to [Anna Ma's and Denali Molitor's paper TRK](https://arxiv.org/pdf/2006.01246) ).
 
 ## Recover Hat
     Recovers tensor from Fourier domain. 
