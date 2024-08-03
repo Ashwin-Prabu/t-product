@@ -34,7 +34,7 @@ The following package contains the different tools required in implementing the 
     Recovers tensor from Fourier domain. 
 
 # 3. Acknowledgements
-    This package is result of the theoretical results derived from two papers: ["Factorization strategies for third-order tensors": by Misha E. Kilmer, and Carla D. Martin](https://www.sciencedirect.com/science/article/pii/S0024379510004830), and ["Randomized Kaczmarz for Tensor Linear Systems" by Anna Ma, and Denali Molitor]. Further theoretical results are present in both papers. 
+    This package is result of the theoretical results derived from two papers: ["Factorization strategies for third-order tensors": by Misha E. Kilmer, and Carla D. Martin](https://www.sciencedirect.com/science/article/pii/S0024379510004830), and ["Randomized Kaczmarz for Tensor Linear Systems" by Anna Ma, and Denali Molitor](https://arxiv.org/pdf/2006.01246). Further theoretical results are present in both papers. 
 
 # 4. References
     1. M. E. Kilmer and C. D. Martin. Factorization strategies for third-order tensors. Linear Algebra App., 435(3):641–658, 2011.
