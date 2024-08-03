@@ -1,4 +1,4 @@
-from    # The code to test
+from t_product import t_product_functions  # The code to test
 import unittest
 import numpy as np
 
@@ -14,45 +14,45 @@ class Test_T_Product_Operations(unittest.TestCase):
 
     def test_unfold(self):
         temp = t_product_functions.unfold(self.A)
-        self.assertTrue(temp - self.A_u == 0)
+        self.assertTrue((temp - self.A_u == 0).all)
 
-    def test_unfold(self):
+    def test_bcirc(self):
         temp = t_product_functions.bcirc(self.A)
-        self.assertTrue(temp - self.A_u == 0)
+        self.assertTrue((temp - self.A_b == 0).all)
 
     def test_fold(self):
         temp = t_product_functions.fold(self.A_u, 2)
-        self.assertTrue(temp - self.A == 0)
+        self.assertTrue((temp - self.A == 0).all)
 
     def test_t_product(self):
         temp = t_product_functions.t_product(self.A, self.B)
-        self.assertTrue(temp - self.C <= 10**-10)
+        self.assertTrue((temp - self.C <= 10**-10).all)
 
 
     def test_M_hat(self):
         temp = t_product_functions.M_hat(self.A)
-        self.assertTrue(temp - self.A_hat  <= 10**-10)
+        self.assertTrue((temp - self.A_hat  <= 10**-10).all)
 
 
     def test_identity_tensor(self):
         temp1 = np.array([[[1., 0.],[0., 0.]],[[0., 0.],[1., 0.]]])
         temp2 = t_product_functions.identity_tensor(2,2)
-        self.assertTrue(temp1 == temp2)
+        self.assertTrue((temp1 == temp2).all)
 
 
     def test_conjT(self):
         temp = t_product_functions.conjT(self.A)
-        self.assertTrue(self.A_t == temp)
+        self.assertTrue((self.A_t == temp).all)
 
     def test_inverse_row_slices(self):
         temp = t_product_functions.inverse_row_slice(self.A[0:1,:,:])
         A_i = t_product_functions.t_product(self.A[0:1,:,:], t_product_functions.conjT(self.A[0:1,:,:]))
         I = t_product_functions.identity_tensor(1,2)
-        self.assertTrue(t_product_functions.t_product(A_i, t_product_functions.inverse_row_slice(self.A[0:1,:,:]))-I <= 10**-10)
+        self.assertTrue((t_product_functions.t_product(A_i, t_product_functions.inverse_row_slice(self.A[0:1,:,:]))-I <= 10**-10).all)
 
     def test_recover_hat(self):
         temp = t_product_functions.recover_hat(self.A_hat)
-        self.assertTrue(temp - self.A <= 10**-10)
+        self.assertTrue((temp - self.A <= 10**-10).all)
 
 if __name__ == '__main__':
     unittest.main()
