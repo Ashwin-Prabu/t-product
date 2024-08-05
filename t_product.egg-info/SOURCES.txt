@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+t_product/__init__.py
+t_product/t_product_functions.py
+t_product.egg-info/PKG-INFO
+t_product.egg-info/SOURCES.txt
+t_product.egg-info/dependency_links.txt
+t_product.egg-info/requires.txt
+t_product.egg-info/top_level.txt
